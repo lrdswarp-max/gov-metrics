@@ -4,7 +4,7 @@ import { createClient } from "@/lib/supabase/middleware";
 const protectedRoutes = ["/dashboard"];
 const authRoutes = ["/login", "/signup"];
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const { supabase, response } = createClient(request);
 
   const {
